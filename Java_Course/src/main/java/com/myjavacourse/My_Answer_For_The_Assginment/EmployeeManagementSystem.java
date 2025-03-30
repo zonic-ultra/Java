@@ -8,6 +8,7 @@ public class EmployeeManagementSystem {
 //        Department (String)
 //        Salary (double)
 //        IsReadyForRetire (boolean)
+
         String department1 = "IT Department";
         String name1 = "Judens Bandal";
         int age1 = 22;
@@ -39,18 +40,21 @@ public class EmployeeManagementSystem {
 //        Instructions
 //        1. Check if any of the employees are eligible for
 //        retirement (assume retirement age is 65). //can use Ternary Operator
-        String isReadyForRetirement1 = isReadyForRetire1 & age1 >= 65 ? " is eligible for retirement": " is not eligible for retirement";
+        String isReadyForRetirement1 = isReadyForRetire1 && age1 >= 65 ? " is eligible for retirement": " is not eligible for retirement";
         System.out.println(name1 + isReadyForRetirement1);
-        String isReadyForRetirement2 = isReadyForRetire2 & age2 >= 65 ? " is eligible for retirement": " is not eligible for retirement";
+
+        String isReadyForRetirement2 = isReadyForRetire2 && age2 >= 65 ? " is eligible for retirement": " is not eligible for retirement";
         System.out.println(name2 + isReadyForRetirement2);
-        String isReadyForRetirement3 = isReadyForRetire3 & age3 >= 65 ? " is eligible for retirement": " is not eligible for retirement";
+
+        String isReadyForRetirement3 = isReadyForRetire3 && age3 >= 65 ? " is eligible for retirement": " is not eligible for retirement";
         System.out.println(name3 + isReadyForRetirement3);
-        String isReadyForRetirement4 = isReadyForRetire4 & age4 >= 65 ? " is eligible for retirement": " is not eligible for retirement";
+
+        String isReadyForRetirement4 = isReadyForRetire4 && age4 >= 65 ? " is eligible for retirement": " is not eligible for retirement";
         System.out.println(name4 + isReadyForRetirement4);
         System.out.println();
 
 //        2. Calculate the average salary per department
-        double averageSalaryPerDepartment1 = (salary1 + salary2) /2;
+        double averageSalaryPerDepartment1 = (salary1 + salary2)/2;
         System.out.println("Average Salary of "+ department1+ " : " + averageSalaryPerDepartment1);
 
         double averageSalaryPerDepartment2 = (salary3 + salary4) /2;
@@ -58,7 +62,6 @@ public class EmployeeManagementSystem {
 
 
 //        3. Calculate the average age of the employees
-
         int averageAgeOfAllDepartment= (age1 + age2 + age3 + age4) /4;
         System.out.println("Average Age of "+ department1+ " and "+ department2+ " : " + averageAgeOfAllDepartment+"\n");
 //        int averageAgePerDepartment2 = age3 + age4 /2;
