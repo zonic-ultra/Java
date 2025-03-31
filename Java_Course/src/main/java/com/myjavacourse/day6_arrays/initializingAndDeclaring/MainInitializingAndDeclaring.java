@@ -13,7 +13,7 @@ public class MainInitializingAndDeclaring {
 
         for (int y= 0; y < employeeName.length; y++){
             String names = employeeName[y];
-            System.out.println("Name " + names);
+            System.out.println("Name: " + names);
         }
     }
 

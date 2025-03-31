@@ -1,6 +1,6 @@
-package com.myjavacourse.My_Answer_For_The_Assginment;
+package com.myjavacourse.day4_operators.My_Answer_For_The_Assginment;
 
-public class EmployeeManagementSystem {
+public class EmployeeManagementSystem1 {
     public static void main(String[] args){
 //        Name (String)
 //        Age (int)
