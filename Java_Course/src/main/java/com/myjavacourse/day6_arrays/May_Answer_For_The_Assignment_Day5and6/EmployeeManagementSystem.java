@@ -62,8 +62,7 @@ public class EmployeeManagementSystem {
 //        double salary = 1837500.00;
         double incrementRate = 0.05; // 5% increment per year
 
-        System.out.println("\nTask 3: Salary Increment" +
-                " Projected salary for "  +  name1 + " over 5 years:");
+        System.out.println("\nTask 3: Salary Increment" + " Projected salary for "  +  name1 + " over 5 years:");
         for (int year = 1; year<=5; year++){
             System.out.printf("Year %d: Php %.2f%n",
                                 year,    salary1);
