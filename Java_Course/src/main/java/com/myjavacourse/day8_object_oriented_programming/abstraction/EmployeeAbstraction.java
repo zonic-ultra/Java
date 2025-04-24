@@ -12,6 +12,7 @@ public abstract class EmployeeAbstraction {
     }
 
     public  abstract double calculateSalary();
+
     public void displayEmpInfo(){
         System.out.println("Name : " + name);
         System.out.println("Id : " + id);
