@@ -10,6 +10,7 @@ public class EmployeeServiceArrayList {
     }
     //CRUD
 
+    //get
     public EmployeeArrayList getFirstEmployee() {
         return employeeLists.getFirst();
     }
@@ -20,9 +21,8 @@ public class EmployeeServiceArrayList {
     public EmployeeArrayList getIndexEmployee(int index) {
         return employeeLists.get(index);
     }
-//    public EmployeeArrayList getLasEmployee() {
-//        return employeeLists.getClass();
-//    }
+
+    //add
     public void addEmployee(EmployeeArrayList addEmployeeList){
         employeeLists.add(addEmployeeList);
     }
