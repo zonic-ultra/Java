@@ -3,6 +3,7 @@ package com.myjavacourse.day10_java_collections_framework.linkedList;
 import java.util.LinkedList;
 
 public class EmployeeServiceLinkedList {
+
     private LinkedList<EmployeeLinkedList> employeeLinkedLists;
 
     public  EmployeeServiceLinkedList(){
