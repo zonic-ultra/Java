@@ -17,8 +17,8 @@ public class MainLogical {
         }
 
 
-        //or
-        if (yearsOfExperiences == 9 || salary == 90000.50){
+        //or at least 1 is true
+        if (yearsOfExperiences == 9 || salary == 900000.50){
             System.out.println("Judens has been with the company for 5 years and have a salary of 90k per month");
         }else {
             System.out.println("Judens has been with the company for 5 years and don't have a salary of 90k per month");

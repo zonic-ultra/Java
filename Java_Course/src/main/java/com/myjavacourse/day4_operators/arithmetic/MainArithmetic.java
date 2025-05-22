@@ -16,9 +16,9 @@ public class MainArithmetic {
        System.out.println("Addition");
        System.out.println("Gross Pay: = " + grossPay);
 
-//       substraction
+//       subtraction
        double netPay = salary - tax;
-       System.out.println("Substraction");
+       System.out.println("Subtraction");
        System.out.println("Net Pay: = " + netPay);
 //
 
