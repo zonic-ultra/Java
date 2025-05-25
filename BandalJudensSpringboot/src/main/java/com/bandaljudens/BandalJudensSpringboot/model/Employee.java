@@ -25,7 +25,7 @@ public class Employee {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -56,6 +56,7 @@ public class Employee {
     public void addAssets(Assets asset){
         this.assets.add(asset);
     }
+
     public void removeAssets(Assets asset){
         this.assets.remove(asset);
     }
