@@ -148,12 +148,65 @@ public class InventoryController {
     //==============ASSIGNING ASSETS
 
     //Assigning assets to specific employee
+    @PostMapping("employees/{employeeId}/assets/{assetId}")
+    public ResponseEntity<?> assignedToSpecificEmployee(@PathVariable Long employeeId, @PathVariable Long assetId){
 
+        Optional<Employee>employeeOptional = inventoryService.getEmpById(employeeId);
+        Optional<Assets>assetsOptional = inventoryService.getAssetsById(assetId);
+
+        if (employeeOptional.isPresent() && assetsOptional.isPresent()){
+            Employee employee = employeeOptional.get();
+            Assets assets = assetsOptional.get();
+
+            //Set relationship
+            assets.setEmployee(employee);
+            employee.addAssets(assets);
+
+            //save and update assets
+            inventoryService.addAssets(assets);
+
+            //save and update employee
+            Employee updatedEmployee = inventoryService.addEmployee(employee);
+
+            return ResponseEntity.created(URI.create("/api/inventory/employees/" + employeeId + "/assets/" + assetId))
+                    .body(updatedEmployee);
+        }
+        return ResponseEntity.notFound().build();
+    }
 
     //Delete assets from specific employee
+    @DeleteMapping("employees/{employeeId}/assets/{assetId}")
+    public ResponseEntity<?> DeleteAssetsFromSpecificEmployee(@PathVariable Long employeeId, @PathVariable Long assetId){
+        Optional<Employee> employeeOptional = inventoryService.getEmpById(employeeId);
+        Optional<Assets> assetsOptional = inventoryService.getAssetsById(assetId);
+
+        if (employeeOptional.isPresent() && assetsOptional.isPresent()){
+            Employee employee = employeeOptional.get();
+            Assets assets = assetsOptional.get();
+
+            assets.setEmployee(employee);
+            employee.removeAssets(assets);
+
+            inventoryService.deleteAssets(assetId);
+//            inventoryService.deleteEmp(employeeId);
+
+
+            return ResponseEntity.noContent().build();
+
+        }
+
+        return ResponseEntity.notFound().build();
+
+    }
 
 
     //Get asset from specific employee
+    @GetMapping("employees/{employeeId}/assets")
+    public List<Assets>GetAssetFromSpecificEmployee(@PathVariable Long employeeId){
+        Optional<Employee> employeeOptional = inventoryService.getEmpById(employeeId);
+
+        return employeeOptional.map(Employee::getAssets).orElse(null);
+    }
 
 
 

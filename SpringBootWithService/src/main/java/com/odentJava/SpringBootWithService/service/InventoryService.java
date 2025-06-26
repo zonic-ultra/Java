@@ -43,10 +43,11 @@ public class InventoryService {
     public Employee updateEmployee(Long employeeId, Employee updateEmp){
         if (employeeRep.existsById(employeeId)){
             updateEmp.setId(employeeId);
-            employeeRep.save(updateEmp);
+           return employeeRep.save(updateEmp);
         }
         return null;
     }
+
 //    =========delete employee
     public void deleteEmp(Long employeeId){
         employeeRep.deleteById(employeeId);

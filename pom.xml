@@ -10,7 +10,7 @@
     <modules>
         <module>BandalJudensSpringboot</module>
         <module>Java_Course</module>
-        <module>springbootwithcomponents</module>
+<!--        <module>springbootwithcomponents</module>-->
         <module>SpringBootWithService</module>
     </modules>
 
