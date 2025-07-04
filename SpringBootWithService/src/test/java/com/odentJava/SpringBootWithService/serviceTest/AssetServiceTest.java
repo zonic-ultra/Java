@@ -35,7 +35,6 @@ public class AssetServiceTest {
         testAsset = new Assets(201L,"Lenovooo","DevOps laptop","LENO123");
         updateAsset = new Assets(201L,"Lenov0","DevOps laptop","LEN1234");
     }
-
     //Get all assets
     @Test
     void getAllAssets_ShouldReturnAllAssets(){
